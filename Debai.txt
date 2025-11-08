@@ -1,0 +1,11 @@
+Tóm tắt Bài toán: Xây dựng Hệ thống Giám sát Dữ liệu Cảm biến Thời gian thực
+1. Bối cảnh:
+Bạn được giao nhiệm vụ phát triển một hệ thống phần mềm nhúng (embedded system) cho một công ty sản xuất ô tô. Hệ thống này cần liên tục giám sát dữ liệu từ hàng trăm cảm biến trên xe như nhiệt độ động cơ, áp suất lốp, tốc độ, v.v.
+2. Các Yêu cầu chính của Hệ thống:
+Hệ thống phải đáp ứng 4 yêu cầu khắt khe:
+• Hiệu năng cao: Có khả năng xử lý đồng thời dữ liệu từ nhiều cảm biến mà không bị trễ hay ảnh hưởng lẫn nhau.
+• Phản ứng tức thì: Phải phát hiện và ghi lại ngay lập tức các sự kiện khi giá trị cảm biến vượt ngưỡng nguy hiểm (ví dụ: động cơ quá nóng) để phân tích sau.
+• Độ tin cậy: Hoạt động phải ổn định trong thời gian dài. Khi tắt máy, phải đảm bảo mọi dữ liệu đã thu thập được xử lý và lưu lại đầy đủ, không để mất mát thông tin.
+• Khả năng mở rộng: Kiến trúc phải được thiết kế để dễ dàng thêm cảm biến mới hoặc tăng luồng xử lý trong tương lai.
+3. Giải pháp đề xuất:
+Để giải quyết bài toán, giải pháp được đưa ra là xây dựng một ứng dụng đa luồng dựa trên mô hình Producer-Consumer (Nhà sản xuất - Người tiêu dùng).
