@@ -1,0 +1,17 @@
+
+Common:
+    - Circullar queue stores the input buffer
+    - Mutex instances to protect data
+
+Producer:
+    - Input data:
+        + create static array store database value
+        + Constructor take input as a call back function return "int" data type which is sensor value
+        + Create thread handle input every given time
+        + Use mutex to protect data from other consumer
+        + Destructor clear all the data from input
+Consumer:
+    -Output data:
+        + Constructor take input and print to terminal
+        + Pop the queue
+        + if there is non input to execute, go to sleep and check for next request
